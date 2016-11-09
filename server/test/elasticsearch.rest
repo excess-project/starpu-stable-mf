@@ -1,0 +1,51 @@
+// Global Settings
+http://localhost:9200
+Accept: application/json
+--
+
+--
+GET /ms2_t2.1/AVQa1RU0GMPeuCn4_2S_/_search
+
+--
+GET /ms2_t2.1/experiment/_search
+
+--
+GET /ms2_t2.1/AVS-vzfnGMPeuCn4T2HZ/_search
+
+--
+GET /ms2_t2.1/AVS_GvCNGMPeuCn4T-pC/_search
+
+
+--
+GET /_cat/indices?v
+
+--
+GET /_nodes?pretty
+
+--
+GET /ms2_t2.1/_mapping
+
+--
+GET /ms2_t2.1/AVQaL6a7GMPeuCn4-4rP/_search
+
+--
+GET /deployment_on_test/ms2_t2.1/_search
+
+--
+POST /_snapshot/es_backup/snapshot_02_24_2016/_restore
+{
+    "indices": "dreamcloud_pwm_idx*",
+    "ignore_unavailable": true,
+    "include_global_state": false
+}
+
+--
+PUT /_snapshot/es_backup
+{
+    "type": "fs",
+    "settings": {
+        "location": "/home/hopped/hlrs/codebase/excess/1.0.2/es_backup",
+        "compress": true
+    }
+}
+

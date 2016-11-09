@@ -1,0 +1,29 @@
+# RELEASE NOTES
+
+## 16.6 (22/06/2016)
+
+### Bugfixes
+- Adapted index name for energy measurements by dreamcloud
+- Removed json-hash from package and introduced crypto library with a small fix for hashing (JSON.stringify)
+- Fixed issue with uppercase task IDs in url
+- More error handling and error reporting in case of empty response, non-existing index, and so on.
+
+### Features
+- New plugin units API
+- Added data statistics API based on different hostnames and multiple metrics; refresh the data base before statistics data search
+- New method to register an experiment with existing experiment ID
+- Added platform ID for calls to /mf/resources
+- Added summary routes; first draft for /mf/summary with energy and runtime reports; added metric data to summary view
+- Updated /mf/deployments to support deployment plans; extended response for /mf/deployments
+- Bulk message posting API
+- Included test files for REST API
+- Included /mf/time
+
+
+
+## 16.2 (26/02/2016)
+
+### Features
+- Unification of EXCESS and DreamCloud APIs
+- Introduction of version schema; current API version is v1
+- Split up backend functionality and front-end (Web interface)

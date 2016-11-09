@@ -1,0 +1,28 @@
+{
+  "name": "monitoring-server",
+  "version": "1.0.0",
+  "description": "RESTful services for the ATOM monitoring framework",
+  "title": "DreamCloud RESTful API",
+  "url" : "http://mf.excess-project.eu:3030/v1/dreamcloud/mf",
+  "header": {
+    "title": "DreamCloud API"
+  },
+  "order": [
+    "Workflows",
+    "Experiments",
+    "Deployment_Plans",
+    "Metrics",
+    "Profiles",
+    "Progress",
+    "Energy",
+    "Runtime",
+    "Reports",
+    "Status",
+    "Resources",
+    "Statistics"
+  ],
+  "template": {
+  	"withCompare": true,
+  	"withGenerator": true
+  }
+}

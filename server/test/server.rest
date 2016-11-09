@@ -1,0 +1,55 @@
+// GLOBAL SETTINGS
+http://localhost:3030/v1
+Accept: application/json
+--
+
+#
+# GET report for cluster experiment
+#
+--
+GET /dreamcloud/mf/report/ms2/AVS_GvCNGMPeuCn4T-pC
+
+#
+# GET energy data for experiment
+#
+--
+GET /dreamcloud/mf/energy/ms2/t2.1/AVS_GvCNGMPeuCn4T-pC
+
+#
+# GET deployment plan for a given hash value
+#
+--
+GET /dreamcloud/mf/deployments/ms2/t2.1/test_cluster/4e165a82309000fd5a6ab20c097b2e9f2ba5216d
+--
+GET /dreamcloud/mf/deployments/ms2/t2.1/test_cluster/da117e8171ae58b935a02a9768c21ce96ffd5f6e
+--
+GET /dreamcloud/mf/deployments/ms2/t2.1/test_cluster
+
+#
+# GET deployment plan for a given hash value
+#
+--
+GET /dreamcloud/mf/summary/ms2/t2.1/test_cluster
+
+#
+# GET summary for a given workflow, task, platform, and deployment combination
+#
+--
+GET /dreamcloud/mf/summary/ms2/t2.1/test_cluster/4e165a82309000fd5a6ab20c097b2e9f2ba5216d
+
+#
+# GET statistics for a given metric
+#
+GET /dreamcloud/mf/statistics/ms2/t2.1/AVQa1RU0GMPeuCn4_2S
+
+--
+GET /dreamcloud/mf/progress/ms2/t2.1/AVQa1RU0GMPeuCn4_2S_
+
+--
+GET /dreamcloud/mf/progress/ms2/t2.1/AVRMbxnvGMPeuCn4HOiA
+
+--
+GET /dreamcloud/mf/progress/ms2/t2.1/AVS-vzfnGMPeuCn4T2HZ
+
+--
+GET /dreamcloud/mf/progress/ms2/t2.1/AVS_GvCNGMPeuCn4T-pC

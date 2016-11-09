@@ -9,16 +9,6 @@ REVISION = 16.8.1
 HOST=$(shell hostname)
 INSTALL_DIR = dist
 
-ifneq (,$(findstring excess,$(HOST)))
-	INSTALL_DIR = /opt/mf/${REVISION}
-	CXX = /opt/centos/devtoolset-1.1/root/usr/bin/g++
-endif
-
-ifneq (,$(findstring jenkins,$(HOST)))
-	INSTALL_DIR = dist
-	CXX = /opt/centos/devtoolset-1.1/root/usr/bin/g++
-endif
-
 INSTALL_PLUGINS_DIR = $(INSTALL_DIR)/bin/plugins
 INSTALL_INCLUDES_DIR = $(INSTALL_DIR)/include
 INSTALL_LIB_DIR = $(INSTALL_DIR)/lib

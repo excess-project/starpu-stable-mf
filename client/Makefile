@@ -3,7 +3,7 @@
 
 CC = gcc
 CXX = g++
-COPT_SO = $(CFLAGS) -fpic
+COPT_SO = $(CFLAGS) -fPIC
 
 REVISION = 16.8.1
 HOST=$(shell hostname)
@@ -86,12 +86,12 @@ EXCESS_QUEUE_C = -I$(BASE)/../ext/queue
 #
 .PHONY: libmf.so plugins copy_plugins clean
 
-all: prepare excess_main copy_plugins lib
+all: $(SRC)/util.o prepare excess_main copy_plugins lib
 
 lib: libmf.so libmf.a
 
 $(SRC)/%.o: %.c $(HEADER)
-	$(CC) -c $< $(CFLAGS) -fpic
+	$(CC) -c $< $(COPT_SO)
 
 excess_concurrent_queue.o:
 	$(CXX) -c $(BASE)/../ext/queue/excess_concurrent_queue.cpp -o $@ -I. $(EXCESS_QUEUE) $(EXCESS_QUEUE_C) -fpic
